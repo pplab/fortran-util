@@ -24,7 +24,6 @@
 !  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 integer function mod1(m, p)
-! Free for non 
 ! A new mod function whose domain is [1 p] instead of [0 p-1]
     implicit none
     integer,intent(in)  ::  m, p
@@ -32,5 +31,3 @@ integer function mod1(m, p)
     mod1=mod(m-1+p,p)+1
     return
 end function mod1
-
-
