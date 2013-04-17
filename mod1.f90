@@ -27,7 +27,13 @@ integer function mod1(m, p)
 ! A new mod function whose domain is [1 p] instead of [0 p-1]
     implicit none
     integer,intent(in)  ::  m, p
+    integer k
 
-    mod1=mod(m-1+p,p)+1
+    k=m
+    do while(k<1)
+        k=k+p
+    end do
+
+    mod1=mod(k-1+p,p)+1
     return
 end function mod1
